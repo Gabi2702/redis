@@ -15,7 +15,7 @@ client
     console.log('err happened' + err);
   });
 // Database Name
-const dbName = 'Cluster0';
+const dbName = process.env.MONGO_DB_NAME;
 
   const db = client.db(dbName);
   const collection = db.collection('documents');
